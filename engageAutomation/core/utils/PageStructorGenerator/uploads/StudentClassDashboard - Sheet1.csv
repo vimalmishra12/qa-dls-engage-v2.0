@@ -1,0 +1,21 @@
+Label,cssSelector,tagName,group,relation,extraInfo,returnValue,studentAppLangEN
+bookCoverIcon,[data-tid=image-bookCover],img,studentClassDashboardPageData,,,,TRUE
+className,[data-tid=text-bandTitle],h1,studentClassDashboardPageData,,,,Class 1
+BookName,[data-tid=text-bandSubtitle],p,studentClassDashboardPageData,,,,QA free book - 2022
+classDurationIcon,[data-tid=icon-meta-0],svg,studentClassDashboardPageData,,,,
+classDuration,[data-tid=text-metaValue-0],p,studentClassDashboardPageData,,,,"Feb 21, 2022 - Feb 20, 2023"
+classDatesLabel,p[data-tid='text-metaLabel-0'],p,studentClassDashboardPageData,,,,Class Dates
+instructorIcon,[data-tid=icon-meta-1],svg,studentClassDashboardPageData,,,,
+instrutorName,p[data-tid='text-metaValue-1'],p,studentClassDashboardPageData,,,,assignment automation Teacher
+instructorLabel,p[data-tid='text-metaLabel-1'],p,studentClassDashboardPageData,,,,Instructor
+openFlipbookBtn,[data-tid='button-openFlipbook'],btn,studentClassDashboardPageData,,,,Open Flipbook
+otherDetailsBtn,[data-tid='button-otherDetails'],btn,studentClassDashboardPageData,,,,
+assignmentsLbl,[data-tid='text-heading-assignments'],p,studentClassDashboardPageData,,,,Assignments
+overviewBtn,[data-tid='button-view-assignments'],btn,studentClassDashboardPageData,,,,Overview
+dueBtn,[data-tid='button-product-0'],btn,studentClassDashboardPageData,,,,Due
+dueNumberChip,[data-tid='chip-Due'],p,studentClassDashboardPageData,,,,2
+upcomingBtn,[data-tid='button-product-1'],btn,studentClassDashboardPageData,,,,Upcoming
+completeBtn,[data-tid='button-product-2'],btn,studentClassDashboardPageData,,,,Completed
+assignmentTitle,[data-tid*='text-assignmentTitle-,p,assignmentList,parent,pattern,,
+assignmentActivities,[data-tid*='text-assignmentActivities-,p,assignmentList,,pattern,,
+dueDaysChip,[data-tid*=chip-dueDaysPill-,p,assignmentList,,pattern,,

@@ -841,6 +841,24 @@
                     "downloadBtnPDF": "Download PDF",
                     "downloadBtnSheet": "Download Excel"
                 }
+            },
+            "studentClassDashboard": {
+                "student": {
+                    "bookCoverIcon" : "TRUE",
+                    "className" : "Class 1",
+                    "BookName" : "QA free book - 2022",
+                    "classDuration" : "Feb 21, 2022 - Feb 20, 2023",
+                    "classDatesLabel" : "Class Dates",
+                    "instrutorName" : "assignment automation Teacher",
+                    "instructorLabel" : "Instructor",
+                    "openFlipbookBtn" : "Open Flipbook",
+                    "assignmentsLbl" : "Assignments",
+                    "overviewBtn" : "Overview",
+                    "dueBtn" : "Due",
+                    "dueNumberChip" : 2,
+                    "upcomingBtn" : "Upcoming",
+                    "completeBtn" : "Completed"
+                }
             }
         }
     }
