@@ -1,5 +1,5 @@
 "use strict";
-var assignmentListDetailsPage_student = require('../../pages/engageExperienceApp/AssignmentListDetailsPage_student.page.js');
+var assignmentListDetailsPage_student = require('../../pages/engageExperienceApp/assignmentListDetailsPage_student.page.js');
 var appShell = require('../../pages/engageExperienceApp/appShell.page');
 const { confirmPassword_input } = require('../../pages/engageExperienceApp/settings.page.js');
 var sts;

@@ -118,28 +118,30 @@ module.exports = {
         var obj=[];
         action.waitForDisplayed(this.collapsibleActvitiesLbl);
         var list = action.findElements(this.collapsibleActvitiesLbl);
-        if (collapsibleActvitiesLblName) {for (var i=0;i<list.length;i++){
-        if (action.getText(this.collapsibleActvitiesLbl + i) == collapsibleActvitiesLblName) {
-        obj[0] = {
-        collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
-        collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
-        collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
-        activityName:(action.getElementCount(this.activityName+i+"]")  > 0) ? action.getText(this.activityName+i+"]")  : null,
-        activityStatus:(action.getElementCount(this.activityStatus+i+"]")  > 0) ? action.getText(this.activityStatus+i+"]")  : null,
-        }
-        break; 
-        }
+        if (collapsibleActvitiesLblName) {
+            for (var i=0;i<list.length;i++){
+                if (action.getText(this.collapsibleActvitiesLbl + i) == collapsibleActvitiesLblName) {
+                    obj[0] = {
+                        collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
+                        collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
+                        collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
+                        activityName:(action.getElementCount(this.activityName+i+"]")  > 0) ? action.getText(this.activityName+i+"]")  : null,
+                        activityStatus:(action.getElementCount(this.activityStatus+i+"]")  > 0) ? action.getText(this.activityStatus+i+"]")  : null,
+                    }
+                break; 
+                }
+            } 
         } 
-        }else{
-        for (var i=0;i<list.length;i++){
-        obj[i] = {
-        collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
-        collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
-        collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
-        activityName:(action.getElementCount(this.activityName+i+"]")  > 0) ? action.getText(this.activityName+i+"]")  : null,
-        activityStatus:(action.getElementCount(this.activityStatus+i+"]")  > 0) ? action.getText(this.activityStatus+i+"]")  : null,
-        }
-        }
+        else {
+            for (var i=0;i<list.length;i++) {
+                obj[i] = {
+                    collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
+                    collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
+                    collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
+                    activityName:(action.getElementCount(this.activityName+i+"]")  > 0) ? action.getText(this.activityName+i+"]")  : null,
+                    activityStatus:(action.getElementCount(this.activityStatus+i+"]")  > 0) ? action.getText(this.activityStatus+i+"]")  : null,
+                }
+            }
         }
         return obj; 
     }
