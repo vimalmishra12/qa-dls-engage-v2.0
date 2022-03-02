@@ -880,6 +880,20 @@
                     "deletedialoguesubHeader2": "\" from your class Class Assignment.",
                     "cancel_btn": "Cancel",
                     "delete_btn": "Delete"
+                },
+                "student": {
+                    "assignmentDetailPageTitle" : "Assignments",
+                    "assignmentDetailPageSubtitle" : "View current and completed assignments",
+                    "dueAssignmentBtn" : "Due",
+                    "dueAssignmentCount" : "3",
+                    "due_noAssignmentTitle" : "No Assignments Due",
+                    "due_noAssignmentSubTitle" : "You have no assignments due in this class.",
+                    "upcomingAssignmentBtn" : "Upcoming",
+                    "upcoming_noAssignmentTitle" : "No Upcoming Assignments",
+                    "upcoming_noAssignmentSubTitle" : "Any future assignment set by your teacher will appear here.",
+                    "completedAssignmentBtn" : "Completed",
+                    "completed_noAssignmentTitle" : "No Assignments Found",
+                    "completed_noAssignmentSubTitle" : "You have no assignments completed in this class."
                 }
             },
             "createAssignment": {

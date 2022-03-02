@@ -2840,6 +2840,31 @@
           "visualTest": "-"
         }
       ]
+    },
+    {
+      "modulename": "Assignment - Student",
+      "moduledetails": "",
+      "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
+      "testcase": [
+        {
+          "id": "ENG_ASSLISTDETAILS_STU_TC_1",
+          "description": "alidate the blank Due assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLISTDETAILS_STU_TC_2",
+          "description": "alidate the blank Upcoming assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLISTDETAILS_STU_TC_3",
+          "description": "alidate the blank Completed assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        }
+      ]
     }
   ]
 }

@@ -252,6 +252,15 @@
                     "class": [
                     ],
                     "info": {}
+                },
+                "assignmentStudent": {
+                    "email": "assignment_student2@yopmail.com",
+                    "password": "Compro@1234",
+                    "role": "student",
+                    "name": "Assignment Student 2",
+                    "class": [
+                    ],
+                    "info": {}
                 }
             }
         },

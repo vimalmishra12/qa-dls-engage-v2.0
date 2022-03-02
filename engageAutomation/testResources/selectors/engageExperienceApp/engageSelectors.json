@@ -1048,6 +1048,38 @@
                 "fileType": "[data-tid='text-value-1']",
                 "sizeLabel": "[data-tid='label-name-2']",
                 "fileSize": "[data-tid='text-value-2']"
+            },
+            "AssignmentListDetailsPage_student": {
+                "assignmentDetailPageTitle" : "[data-tid=text-pageTitle]",
+                "assignmentDetailPageSubtitle" : "[data-tid=text-pageSubTitle]",
+                "dueAssignmentBtn" : "[data-tid=button-product-0]",
+                "dueAssignmentCount" : "[data-tid=chip-[object Object]",
+                "due_noAssignmentTitle" : "[data-tid=text-title-No Students]",
+                "due_noAssignmentSubTitle" : "[data-tid=text-subtitle-No Students]",
+                "upcomingAssignmentBtn" : "[data-tid=button-product-1]",
+                "upcoming_noAssignmentTitle" : "[data-tid=text-title-No Students]",
+                "upcoming_noAssignmentSubTitle" : "[data-tid=text-subtitle-No Students]",
+                "completedAssignmentBtn" : "[data-tid=button-product-2]",
+                "completed_noAssignmentTitle" : "[data-tid=text-title-No Students]",
+                "completed_noAssignmentSubTitle" : "[data-tid=text-subtitle-No Students]",
+                "completeSearchIcon" : "[data-tid=icon-autocomplete-search]",
+                "completeSearchTextBox" : "[data-tid=input-autocomplete-searchtextbox]",
+                "completeResultLbl" : "[data-tid=label-result]",
+                "assignmentName" : "[data-tid*=text-assignmentName-",
+                "activityIcon" : "[data-tid*=icon-activity-",
+                "assignmentActivityCount" : "[data-tid*=text-activity-",
+                "scoreIcon" : "[data-tid*=icon-score-",
+                "scoreLabel" : "[data-tid*=text-score-",
+                "dateIcon" : "[data-tid*=icon-startDueDate-",
+                "dateLabel" : "[data-tid*=text-startDueDate-",
+                "dueDaysPill" : "[data-tid*=chip-dueDaysPill-",
+                "activityProgressText" : "[data-tid*=text-activitiesProgress-",
+                "showActivitiesBtn" : "[data-tid*=text-toggle-expansion-",
+                "collapsibleActvitiesLbl" : "[data-tid*=text-collapseBandHeader-activities-",
+                "collapsibleScoreLbl" : "[data-tid*=text-collapseBandHeader-activities-",
+                "collapsibleAttemptsLbl" : "[data-tid*=text-collapseBandHeader-activities-",
+                "activityName" : "[data-tid*=text-activityName-",
+                "activityStatus" : "[data-tid*=text-activityProgressStatus-"
             }
         }
     }
