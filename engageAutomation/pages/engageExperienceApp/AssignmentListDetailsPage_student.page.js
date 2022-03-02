@@ -144,7 +144,63 @@ module.exports = {
             }
         }
         return obj; 
-    }
+    },
 
+    click_dueAssignmentBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.dueAssignmentBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " dueAssignmentBtn is clicked");
+        }
+        else {
+            logger.logInto(stackTrace.get(), res +"dueAssignmentBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+        
+    click_upcomingAssignmentBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.upcomingAssignmentBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " upcomingAssignmentBtn is clicked");
+        }
+        else {
+            logger.logInto(stackTrace.get(), res +"upcomingAssignmentBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+        
+    click_completedAssignmentBtn: function () {
+        logger.logInto(stackTrace.get());
+        var res;
+        res = action.click(this.completedAssignmentBtn);
+        if (true == res) {
+            logger.logInto(stackTrace.get(), " completedAssignmentBtn is clicked");
+        }
+        else {
+            logger.logInto(stackTrace.get(), res +"completedAssignmentBtn is NOT clicked", 'error');
+        }
+        return res;
+    },
+        
+    click_showActivitiesBtn: function (assignmentNameName) {
+    logger.logInto(stackTrace.get());
+    var i, list, res;
+    list = action.findElements(this.showActivitiesBtn);
+    for (i = 0; i < list.length; i++) {
+        if ((action.getText(this.assignmentName+i+"]"))== assignmentNameName) {
+            res = action.click(list[i]);
+        break;
+        }
+    }
+    if (res == true) {
+        logger.logInto(stackTrace.get(), " --showActivitiesBtn clicked");
+        res= this.getData_activityList();} 
+    else
+    logger.logInto(stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
+    return res;
+    }
 }
 
