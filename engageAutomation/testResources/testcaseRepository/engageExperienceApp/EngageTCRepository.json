@@ -2848,49 +2848,49 @@
       "testcase": [
         {
           "id": "ENG_ASSLIST_STU_TC_1",
-          "description": "alidate the blank Due assignment page",
+          "description": "Validate the blank Due assignment page",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_ASSLIST_STU_TC_2",
-          "description": "alidate the blank Upcoming assignment page",
+          "description": "Validate the blank Upcoming assignment page",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_ASSLIST_STU_TC_3",
-          "description": "alidate the blank Completed assignment page",
+          "description": "Validate the blank Completed assignment page",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_ASSLIST_STU_TC_4",
-          "description": "alidate the blank Due assignment page",
+          "description": "Validate the click on Due assignment",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_ASSLIST_STU_TC_5",
-          "description": "alidate the blank Upcoming assignment page",
+          "description": "Validate the click on Upcoming assignment",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_ASSLIST_STU_TC_6",
-          "description": "alidate the blank Completed assignment page",
+          "description": "Validate the click on Completed assignment",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_ASSLIST_STU_TC_7",
-          "description": "alidate the blank Completed assignment page",
+          "description": "Validate the content of student assignment list details page",
           "tags": "P2",
           "visualTest": "-"
         },
         {
           "id": "ENG_ASSLIST_STU_TC_8",
-          "description": "alidate the blank Completed assignment page",
+          "description": "Validate the details of assignment list",
           "tags": "P2",
           "visualTest": "-"
         }
