@@ -65,7 +65,8 @@ module.exports = {
         sts = require('../../pages/engageExperienceApp/dashboard.page.js').isInitialized();
         assertion.assertEqual(sts.pageStatus, true, "Dashboard page status mismatch");
         //there should be some other assertion as well to validate successfull login - akhil
-        sts = browser.url("https://engage-difusion-dev1.comprodls.com/class-app/student/teacher_55c78511-0174-40d1-ac8e-340f3e972b50/1e6cff84-c4c7-4bad-a3da-c5f3b066b55a/assignments?selectedTab=due")
+        //sts = browser.url("https://engage-difusion-dev1.comprodls.com/class-app/student/teacher_55c78511-0174-40d1-ac8e-340f3e972b50/1e6cff84-c4c7-4bad-a3da-c5f3b066b55a/assignments?selectedTab=due")
+        sts = browser.url("https://engage-difusion-dev1.comprodls.com/class-app/student/teacher_55c78511-0174-40d1-ac8e-340f3e972b50/c9851157-6135-44fc-b9a1-1f9e5f6f99b1/assignments?selectedTab=due")
     },
 
     //Validate that the user is able to mask/unmask the password by clicking eye icon

@@ -893,7 +893,22 @@
                     "upcoming_noAssignmentSubTitle" : "Any future assignment set by your teacher will appear here.",
                     "completedAssignmentBtn" : "Completed",
                     "completed_noAssignmentTitle" : "No Assignments Found",
-                    "completed_noAssignmentSubTitle" : "You have no assignments completed in this class."
+                    "completed_noAssignmentSubTitle" : "You have no assignments completed in this class.",
+                    "tabList": [
+                        "Due",
+                        "Upcoming",
+                        "Completed"
+                    ],
+                    "dueAssignmentNames": [
+                        "Class Test - Quiz",
+                        "Class Test - Grading"
+                    ],
+                    "upcomingAssignmentNames": [
+                        "Diwali Assignment"
+                    ],
+                    "completedAssignmentNames": [
+                        "Complete Download Assignment"
+                    ]
                 }
             },
             "createAssignment": {

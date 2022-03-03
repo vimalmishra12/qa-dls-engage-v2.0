@@ -76,7 +76,7 @@ module.exports = {
         action.waitForDisplayed(this.assignmentName);
         var list = action.findElements(this.assignmentName);
         if (assignmentNameName) {
-            for (var i=0;i<list.length;i++){
+            for (var i=0;i<list.length;i++) {
                 if (action.getText(this.assignmentName + i) == assignmentNameName) {
                     obj[0] = {
                         assignmentName:(action.getElementCount(this.assignmentName+i+"]")  > 0) ? action.getText(this.assignmentName+i+"]")  : null,
@@ -95,7 +95,7 @@ module.exports = {
             } 
         }
         else {
-            for (var i=0;i<list.length;i++){
+            for (var i=0;i<list.length;i++) {
                 obj[i] = {
                     assignmentName:(action.getElementCount(this.assignmentName+i+"]")  > 0) ? action.getText(this.assignmentName+i+"]")  : null,
                     activityIcon:(action.getElementCount(this.activityIcon+i+"]") > 0) ? action.waitForDisplayed(this.activityIcon+i+"]")  : false,
@@ -110,8 +110,9 @@ module.exports = {
                 }
             }
         }
+        console.log("Obj",obj)
         return obj; 
-        },
+    },
 
     getData_activityList: function (collapsibleActvitiesLblName) {
         logger.logInto(stackTrace.get());
@@ -146,6 +147,7 @@ module.exports = {
         return obj; 
     },
 
+    //Click function for Due Assignment button
     click_dueAssignmentBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
@@ -158,7 +160,8 @@ module.exports = {
         }
         return res;
     },
-        
+      
+    //Click function for Upcoming Assignment button
     click_upcomingAssignmentBtn: function () {
         logger.logInto(stackTrace.get());
         var res;
@@ -172,6 +175,7 @@ module.exports = {
         return res;
     },
         
+    //Click function for Completed Assignment button
     click_completedAssignmentBtn: function () {
         logger.logInto(stackTrace.get());
         var res;

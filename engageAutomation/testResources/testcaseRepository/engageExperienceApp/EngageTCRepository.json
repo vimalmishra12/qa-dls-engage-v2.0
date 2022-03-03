@@ -2847,19 +2847,49 @@
       "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
       "testcase": [
         {
-          "id": "ENG_ASSLISTDETAILS_STU_TC_1",
+          "id": "ENG_ASSLIST_STU_TC_1",
           "description": "alidate the blank Due assignment page",
           "tags": "P2",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ASSLISTDETAILS_STU_TC_2",
+          "id": "ENG_ASSLIST_STU_TC_2",
           "description": "alidate the blank Upcoming assignment page",
           "tags": "P2",
           "visualTest": "-"
         },
         {
-          "id": "ENG_ASSLISTDETAILS_STU_TC_3",
+          "id": "ENG_ASSLIST_STU_TC_3",
+          "description": "alidate the blank Completed assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_4",
+          "description": "alidate the blank Due assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_5",
+          "description": "alidate the blank Upcoming assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_6",
+          "description": "alidate the blank Completed assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_7",
+          "description": "alidate the blank Completed assignment page",
+          "tags": "P2",
+          "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_8",
           "description": "alidate the blank Completed assignment page",
           "tags": "P2",
           "visualTest": "-"
