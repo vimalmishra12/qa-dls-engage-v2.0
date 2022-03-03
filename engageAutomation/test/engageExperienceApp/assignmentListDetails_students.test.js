@@ -8,22 +8,31 @@ module.exports = {
 
    //Validate the blank Due assignment page
    ENG_ASSLISTDETAILS_STU_TC_1: function (testdata) {
+      sts = assignmentListDetailsPage_student.click_dueAssignmentBtn();
+      console.log("due button clicked")
       sts = assignmentListDetailsPage_student.getData_assignmentListPage()
+      assertion.assertEqual(sts.assignmentDetailPageTitle, testdata.assignmentDetailPageTitle, "assignmentDetailPageTitle Label status mismatch");
+      assertion.assertEqual(sts.assignmentDetailPageSubtitle, testdata.assignmentDetailPageSubtitle, "assignmentDetailPageSubtitle Label status mismatch");
       assertion.assertEqual(sts.due_noAssignmentTitle, testdata.due_noAssignmentTitle, "due_noAssignmentTitle Label status mismatch");
       assertion.assertEqual(sts.due_noAssignmentSubTitle, testdata.due_noAssignmentSubTitle, "due_noAssignmentSubTitle Label is avialable");
-
    },
 
    //Validate the blank Upcoming assignment page
    ENG_ASSLISTDETAILS_STU_TC_2: function (testdata) {
+      sts = assignmentListDetailsPage_student.click_upcomingAssignmentBtn();
       sts = assignmentListDetailsPage_student.getData_assignmentListPage()
+      assertion.assertEqual(sts.assignmentDetailPageTitle, testdata.assignmentDetailPageTitle, "assignmentDetailPageTitle Label status mismatch");
+      assertion.assertEqual(sts.assignmentDetailPageSubtitle, testdata.assignmentDetailPageSubtitle, "assignmentDetailPageSubtitle Label status mismatch");
       assertion.assertEqual(sts.upcoming_noAssignmentTitle, testdata.upcoming_noAssignmentTitle, "upcoming_noAssignmentTitle Label status mismatch");
       assertion.assertEqual(sts.upcoming_noAssignmentSubTitle, testdata.upcoming_noAssignmentSubTitle, "upcoming_noAssignmentSubTitle Label is avialable");
    },
 
    //Validate the blank Completed assignment page
    ENG_ASSLISTDETAILS_STU_TC_3: function (testdata) {
+      sts = assignmentListDetailsPage_student.click_completedAssignmentBtn();
       sts = assignmentListDetailsPage_student.getData_assignmentListPage()
+      assertion.assertEqual(sts.assignmentDetailPageTitle, testdata.assignmentDetailPageTitle, "assignmentDetailPageTitle Label status mismatch");
+      assertion.assertEqual(sts.assignmentDetailPageSubtitle, testdata.assignmentDetailPageSubtitle, "assignmentDetailPageSubtitle Label status mismatch");
       assertion.assertEqual(sts.completed_noAssignmentTitle, testdata.completed_noAssignmentTitle, "completed_noAssignmentTitle Label status mismatch");
       assertion.assertEqual(sts.completed_noAssignmentSubTitle, testdata.completed_noAssignmentSubTitle, "completed_noAssignmentSubTitle Label is avialable");
    },
