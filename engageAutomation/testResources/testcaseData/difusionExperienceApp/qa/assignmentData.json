@@ -32,6 +32,24 @@
                     }
                 }
             ]
+        },
+        "assignmentList": {
+            "student": {
+                "dueAssignmentNames": [
+                    "Class Test - Quiz",
+                    "Class Test - Grading"
+                ],
+                "upcomingAssignmentNames": [
+                    "Diwali Assignment"
+                ],
+                "completedAssignmentNames": [
+                    "Complete Download Assignment"
+                ],
+                "completedAssignmentActivityList": {
+                    "activityName": "Document",
+                    "activityStatus": "Completed: Mar 02, 2022"
+                }
+            }
         }
     }
 }

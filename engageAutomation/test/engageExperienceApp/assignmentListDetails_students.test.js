@@ -69,6 +69,19 @@ module.exports = {
       }
    },
 
+   //Validate the click on 'Show Activities' button
+   ENG_ASSLIST_STU_TC_9: function (testdata) {
+      sts = assignmentListDetailsPage_student.click_showActivitiesBtn(testdata[0]);
+      for (let i = 0; i < sts.length; i++) { 
+         assertion.assertEqual(sts[i].activityName, testdata[1].activityName, "Activity name Text mismatch");
+         assertion.assertEqual(sts[i].activityStatus, testdata[1].activityStatus, "Activity status mismatch");
+         assertion.assertEqual(sts[i].collapsibleActvitiesLbl, testdata[2].collapsibleActvitiesLbl, "Activities label Text mismatch");
+         assertion.assertEqual(sts[i].collapsibleScoreLbl, testdata[2].collapsibleScoreLbl, "Score label Text mismatch");
+         assertion.assertEqual(sts[i].collapsibleAttemptsLbl, testdata[2].collapsibleAttemptsLbl, "Attempts label Text mismatch");
+      }
+      
+   },
+
    ENG_ASSLISTDETAILS_TC_12: function (testdata) {
       sts = assignmentListDetailsPage.click_viewProgress_btn(testdata)
       assertion.assertEqual(sts.pageStatus, true, "Assignment Details page status mismatch");

@@ -894,20 +894,13 @@
                     "completedAssignmentBtn" : "Completed",
                     "completed_noAssignmentTitle" : "No Assignments Found",
                     "completed_noAssignmentSubTitle" : "You have no assignments completed in this class.",
+                    "collapsibleActvitiesLbl": "Activities",
+                    "collapsibleScoreLbl": "Score",
+                    "collapsibleAttemptsLbl": "Attempts",
                     "tabList": [
                         "Due",
                         "Upcoming",
                         "Completed"
-                    ],
-                    "dueAssignmentNames": [
-                        "Class Test - Quiz",
-                        "Class Test - Grading"
-                    ],
-                    "upcomingAssignmentNames": [
-                        "Diwali Assignment"
-                    ],
-                    "completedAssignmentNames": [
-                        "Complete Download Assignment"
                     ]
                 }
             },

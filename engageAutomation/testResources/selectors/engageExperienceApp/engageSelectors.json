@@ -1076,8 +1076,8 @@
                 "activityProgressText" : "[data-tid*=text-activitiesProgress-",
                 "showActivitiesBtn" : "[data-tid*=text-toggle-expansion-",
                 "collapsibleActvitiesLbl" : "[data-tid*=text-collapseBandHeader-activities-",
-                "collapsibleScoreLbl" : "[data-tid*=text-collapseBandHeader-activities-",
-                "collapsibleAttemptsLbl" : "[data-tid*=text-collapseBandHeader-activities-",
+                "collapsibleScoreLbl" : "[data-tid*=text-collapseBandHeader-score-",
+                "collapsibleAttemptsLbl" : "[data-tid*=text-collapseBandHeader-attempts-",
                 "activityName" : "[data-tid*=text-activityName-",
                 "activityStatus" : "[data-tid*=text-activityProgressStatus-"
             }

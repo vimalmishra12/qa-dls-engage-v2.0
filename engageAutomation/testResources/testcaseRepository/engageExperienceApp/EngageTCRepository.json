@@ -2893,6 +2893,12 @@
           "description": "Validate the details of assignment list",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_9",
+          "description": "Validate clicking on Show Activities button",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }
