@@ -653,6 +653,11 @@
           "id": "ENG_INS_CLASS_TC_103",
           "description": " Validate the click on Assignment Tab",
           "tags": "P1"
+        },
+        {
+          "id": "ENG_INS_CLASS_TC_104",
+          "description": " Click on overview button",
+          "tags": "P1"
         }
       ]
     },

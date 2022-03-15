@@ -1,5 +1,6 @@
 "use strict";
 var classDashboardPage = require('../../pages/engageExperienceApp/classDashboard.page.js');
+var studentClassDashboard = require('../../pages/engageExperienceApp/studentClassDashboard.page.js');
 var createClassPage = require('../../pages/engageExperienceApp/createClass.page.js');
 var successClassPage = require('../../pages/engageExperienceApp/successClass.page.js');
 const dashboardPage = require('../../pages/engageExperienceApp/dashboard.page.js');
@@ -576,5 +577,8 @@ module.exports = {
 			assertion.assertFail(sts);
 		}
 
+	},
+	ENG_INS_CLASS_TC_104: function () {
+		sts = studentClassDashboard.click_overviewBtn();
 	},
 };

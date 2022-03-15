@@ -49,6 +49,13 @@
             "jsonPath": "engage.login.user.assignmentStudent.class[1].name"
           }
         ]
+      },
+      {
+        "id": "ENG_INS_CLASS_TC_104",
+        "description": "",
+        "testFile": "./test/engageExperienceApp/classDashboard.test.js",
+        "testData": [
+        ]
       }
    
     ],

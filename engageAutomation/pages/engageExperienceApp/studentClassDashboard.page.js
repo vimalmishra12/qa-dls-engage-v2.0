@@ -98,6 +98,7 @@ module.exports = {
         res = action.click(this.overviewBtn);
         if (true == res) {
             logger.logInto(stackTrace.get(), " overviewBtn is clicked");
+            res = require('./AssignmentListDetailsPage_student.page.js').isInitialized();
         }
         else {
             logger.logInto(stackTrace.get(), res +"overviewBtn is NOT clicked", 'error');
