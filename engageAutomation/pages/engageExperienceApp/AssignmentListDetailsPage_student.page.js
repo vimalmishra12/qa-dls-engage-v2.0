@@ -89,6 +89,10 @@ module.exports = {
                         dueDaysPill:(action.getElementCount(this.dueDaysPill+i+"]")  > 0) ? action.getText(this.dueDaysPill+i+"]")  : null,
                         activityProgressText:(action.getElementCount(this.activityProgressText+i+"]")  > 0) ? action.getText(this.activityProgressText+i+"]")  : null,
                         showActivitiesBtn:(action.getElementCount(this.showActivitiesBtn+i+"]")  > 0) ? action.getText(this.showActivitiesBtn+i+"]")  : null,
+                        collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
+                        collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
+                        collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
+
                     }
                 break; 
                 }
@@ -107,6 +111,10 @@ module.exports = {
                     dueDaysPill:(action.getElementCount(this.dueDaysPill+i+"]")  > 0) ? action.getText(this.dueDaysPill+i+"]")  : null,
                     activityProgressText:(action.getElementCount(this.activityProgressText+i+"]")  > 0) ? action.getText(this.activityProgressText+i+"]")  : null,
                     showActivitiesBtn:(action.getElementCount(this.showActivitiesBtn+i+"]")  > 0) ? action.getText(this.showActivitiesBtn+i+"]")  : null,
+                    collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
+                    collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
+                    collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
+
                 }
             }
         }
@@ -157,21 +165,41 @@ module.exports = {
         
     //Click function for 'Show Acivities' button
     click_showActivitiesBtn: function (assignmentNameName) {
-    logger.logInto(stackTrace.get());
-    var i, list, res;
-    list = action.findElements(this.showActivitiesBtn);
-    for (i = 0; i < list.length; i++) {
-        if ((action.getText(this.assignmentName+i+"]"))== assignmentNameName) {
-            res = action.click(list[i]);
-        break;
+        logger.logInto(stackTrace.get());
+        var i, list, res;
+        list = action.findElements(this.showActivitiesBtn);
+        for (i = 0; i < list.length; i++) {
+            if ((action.getText(this.assignmentName+i+"]"))== assignmentNameName) {
+                res = action.click(list[i]);
+            break;
+            }
         }
-    }
-    if (res == true) {
-        logger.logInto(stackTrace.get(), " --showActivitiesBtn clicked");
-        res= this.getData_activityList();} 
-    else
-    logger.logInto(stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
-    return res;
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --showActivitiesBtn clicked");
+            res= this.getData_activityList();} 
+        else
+        logger.logInto(stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
+        return res;
+    },
+
+    //Click function for Clicking selected activity
+    click_activityName: function (activityNameName) {
+        logger.logInto(stackTrace.get());
+        var i, list, res;
+        list = action.findElements(this.activityName);
+        for (i = 0; i < list.length; i++) {
+            if ((action.getText(this.activityName+i+"]"))== activityNameName) {
+                res = action.click(list[i]);
+                break;
+            }
+        }
+        if (res == true) {
+            logger.logInto(stackTrace.get(), " --activityName clicked");
+            res =require ('./activityPlayer.page').isInitialized();
+        } 
+        else
+            logger.logInto(stackTrace.get(), " --activityName NOT clicked", "error")
+        return res;
     },
 
     //Function to get Activity List in an Assignment
@@ -184,11 +212,11 @@ module.exports = {
             for (var i=0;i<list.length;i++){
                 if (action.getText(this.collapsibleActvitiesLbl + i) == collapsibleActvitiesLblName) {
                     obj[0] = {
-                        collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
-                        collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
-                        collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
                         activityName:(action.getElementCount(this.activityName+i+"]")  > 0) ? action.getText(this.activityName+i+"]")  : null,
                         activityStatus:(action.getElementCount(this.activityStatus+i+"]")  > 0) ? action.getText(this.activityStatus+i+"]")  : null,
+                        activityScore:(action.getElementCount(this.activityScore+i+"]")  > 0) ? action.getText(this.activityScore+i+"]")  : null,
+                        activityAttempt:(action.getElementCount(this.activityAttempt+i+"]")  > 0) ? action.getText(this.activityAttempt+i+"]")  : null,
+
                     }
                 break; 
                 }
@@ -197,11 +225,11 @@ module.exports = {
         else {
             for (var i=0;i<list.length;i++) {
                 obj[i] = {
-                    collapsibleActvitiesLbl:(action.getElementCount(this.collapsibleActvitiesLbl+i+"]")  > 0) ? action.getText(this.collapsibleActvitiesLbl+i+"]")  : null,
-                    collapsibleScoreLbl:(action.getElementCount(this.collapsibleScoreLbl+i+"]")  > 0) ? action.getText(this.collapsibleScoreLbl+i+"]")  : null,
-                    collapsibleAttemptsLbl:(action.getElementCount(this.collapsibleAttemptsLbl+i+"]")  > 0) ? action.getText(this.collapsibleAttemptsLbl+i+"]")  : null,
                     activityName:(action.getElementCount(this.activityName+i+"]")  > 0) ? action.getText(this.activityName+i+"]")  : null,
                     activityStatus:(action.getElementCount(this.activityStatus+i+"]")  > 0) ? action.getText(this.activityStatus+i+"]")  : null,
+                    activityScore:(action.getElementCount(this.activityScore+i+"]")  > 0) ? action.getText(this.activityScore+i+"]")  : null,
+                    activityAttempt:(action.getElementCount(this.activityAttempt+i+"]")  > 0) ? action.getText(this.activityAttempt+i+"]")  : null,
+
                 }
             }
         }

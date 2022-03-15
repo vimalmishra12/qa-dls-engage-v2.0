@@ -894,6 +894,7 @@
                     "completedAssignmentBtn" : "Completed",
                     "completed_noAssignmentTitle" : "No Assignments Found",
                     "completed_noAssignmentSubTitle" : "You have no assignments completed in this class.",
+                    "showActivitiesBtn" : "Show Activities",
                     "collapsibleActvitiesLbl": "Activities",
                     "collapsibleScoreLbl": "Score",
                     "collapsibleAttemptsLbl": "Attempts",
