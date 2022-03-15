@@ -1053,7 +1053,7 @@
                 "assignmentDetailPageTitle" : "[data-tid=text-pageTitle]",
                 "assignmentDetailPageSubtitle" : "[data-tid=text-pageSubTitle]",
                 "dueAssignmentBtn" : "[data-tid=button-product-0]",
-                "dueAssignmentCount" : "[data-tid=chip-[object Object]",
+                "dueAssignmentCount" : "[data-tid=chip-Due]",
                 "due_noAssignmentTitle" : "[data-tid='text-title-No Students']",
                 "due_noAssignmentSubTitle" : "[data-tid='text-subtitle-No Students']",
                 "upcomingAssignmentBtn" : "[data-tid=button-product-1]",
