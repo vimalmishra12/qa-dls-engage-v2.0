@@ -275,11 +275,19 @@
                     "info": {}
                 },
                 "assignmentStudent": {
-                    "email": "assignment_student2@yopmail.com",
+                    "email": "assignment_student1@yopmail.com",
                     "password": "Compro@1234",
                     "role": "student",
                     "name": "Assignment Student 2",
                     "class": [
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class with no assignment"
+                        },
+                        {
+                            "key": "TFbA-6AP7",
+                            "name": "Class 1"
+                        }
                     ],
                     "info": {}
                 }

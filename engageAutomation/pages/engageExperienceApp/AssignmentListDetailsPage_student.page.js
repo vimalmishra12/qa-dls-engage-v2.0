@@ -182,6 +182,45 @@ module.exports = {
         return res;
     },
 
+    //Function to get Activity List in an Assignment
+    getData_activityList: function (collapsibleActvitiesLblName) {
+        logger.logInto(stackTrace.get());
+        var obj=[];
+        action.waitForDisplayed(this.collapsibleActvitiesLbl);
+        var list = action.findElements(this.collapsibleActvitiesLbl);
+        if (collapsibleActvitiesLblName) {
+            for (var i=0;i<list.length;i++){
+                if (action.getText(this.collapsibleActvitiesLbl + i) == collapsibleActvitiesLblName) {
+                    obj[0] = {
+                        activityName:(action.getElementCount(this.activityName+"-0-"+i+"]")  > 0) ? action.getText(this.activityName+"-0-"+i+"]")  : null,
+                        activityStatus:(action.getElementCount(this.activityStatus+"-0-"+i+"]")  > 0) ? action.getText(this.activityStatus+"-0-"+i+"]")  : null,
+                        activityScore:(action.getElementCount(this.activityScore+"-0-"+i+"]")  > 0) ? action.getText(this.activityScore+"-0-"+i+"]")  : null,
+                        activityAttempt:(action.getElementCount(this.activityAttempt+"-0-"+i+"]")  > 0) ? action.getText(this.activityAttempt+"-0-"+i+"]")  : null,
+
+                    }
+                break; 
+                }
+            } 
+        } 
+        else {
+            console.log("List/length",list.length);
+            // var i = 0;
+            // let name = action.getText(this.activityName+"0-"+i+"]");
+            //console.log("name - ",name);
+            for (var i=0;i<list.length;i++) {
+                obj[i] = {
+                    activityName:(action.getElementCount(this.activityName+"-0-"+i+"]")  > 0) ? action.getText(this.activityName+"-0-"+i+"]")  : null,
+                    activityStatus:(action.getElementCount(this.activityStatus+"-0-"+i+"]")  > 0) ? action.getText(this.activityStatus+"-0-"+i+"]")  : null,
+                    activityScore:(action.getElementCount(this.activityScore+"-0-"+i+"]")  > 0) ? action.getText(this.activityScore+"-0-"+i+"]")  : null,
+                    activityAttempt:(action.getElementCount(this.activityAttempt+"-0-"+i+"]")  > 0) ? action.getText(this.activityAttempt+"-0-"+i+"]")  : null,
+
+                }
+            }
+        }
+        console.log("activity list -",obj)
+        return obj; 
+    },
+
     //Click function for Clicking selected activity
     click_activityName: function (activityNameName) {
         logger.logInto(stackTrace.get());
@@ -200,40 +239,8 @@ module.exports = {
         else
             logger.logInto(stackTrace.get(), " --activityName NOT clicked", "error")
         return res;
-    },
-
-    //Function to get Activity List in an Assignment
-    getData_activityList: function (collapsibleActvitiesLblName) {
-        logger.logInto(stackTrace.get());
-        var obj=[];
-        action.waitForDisplayed(this.collapsibleActvitiesLbl);
-        var list = action.findElements(this.collapsibleActvitiesLbl);
-        if (collapsibleActvitiesLblName) {
-            for (var i=0;i<list.length;i++){
-                if (action.getText(this.collapsibleActvitiesLbl + i) == collapsibleActvitiesLblName) {
-                    obj[0] = {
-                        activityName:(action.getElementCount(this.activityName+i+"]")  > 0) ? action.getText(this.activityName+i+"]")  : null,
-                        activityStatus:(action.getElementCount(this.activityStatus+i+"]")  > 0) ? action.getText(this.activityStatus+i+"]")  : null,
-                        activityScore:(action.getElementCount(this.activityScore+i+"]")  > 0) ? action.getText(this.activityScore+i+"]")  : null,
-                        activityAttempt:(action.getElementCount(this.activityAttempt+i+"]")  > 0) ? action.getText(this.activityAttempt+i+"]")  : null,
-
-                    }
-                break; 
-                }
-            } 
-        } 
-        else {
-            for (var i=0;i<list.length;i++) {
-                obj[i] = {
-                    activityName:(action.getElementCount(this.activityName+i+"]")  > 0) ? action.getText(this.activityName+i+"]")  : null,
-                    activityStatus:(action.getElementCount(this.activityStatus+i+"]")  > 0) ? action.getText(this.activityStatus+i+"]")  : null,
-                    activityScore:(action.getElementCount(this.activityScore+i+"]")  > 0) ? action.getText(this.activityScore+i+"]")  : null,
-                    activityAttempt:(action.getElementCount(this.activityAttempt+i+"]")  > 0) ? action.getText(this.activityAttempt+i+"]")  : null,
-
-                }
-            }
-        }
-        return obj; 
     }
+
+
 }
 

@@ -1079,7 +1079,9 @@
                 "collapsibleScoreLbl" : "[data-tid*=text-collapseBandHeader-score-",
                 "collapsibleAttemptsLbl" : "[data-tid*=text-collapseBandHeader-attempts-",
                 "activityName" : "[data-tid*=text-activityName-",
-                "activityStatus" : "[data-tid*=text-activityProgressStatus-"
+                "activityStatus" : "[data-tid*=text-activityProgressStatus-",
+                "activityScore" : "[data-tid*=text-score-",
+                "activityAttempt" : "[data-tid*=text-attempts-"
             }
         }
     }

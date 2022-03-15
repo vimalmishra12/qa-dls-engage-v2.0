@@ -43,11 +43,14 @@
                     "Diwali Assignment"
                 ],
                 "completedAssignmentNames": [
+                    "Completed Quiz",
                     "Complete Download Assignment"
                 ],
                 "completedAssignmentActivityList": {
-                    "activityName": "Document",
-                    "activityStatus": "Completed: Mar 02, 2022"
+                    "activityName": "More than 5 MB",
+                    "activityStatus": "Completed: Mar 15, 2022",
+                    "activityScore": "100%",
+                    "activityAttempts": "1"
                 }
             }
         }

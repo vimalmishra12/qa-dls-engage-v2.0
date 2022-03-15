@@ -61,20 +61,27 @@ module.exports = {
       assertion.assertEqual(sts.completedAssignmentBtn, testdata.completedAssignmentBtn, "completedAssignmentBtn Label status mismatch");
    },
 
-   //validate the details of assignment list
+   //Validate the details of assignment list
    ENG_ASSLIST_STU_TC_8: function (testdata) {
       sts = assignmentListDetailsPage_student.getData_assignmentList()
+      //console.log("Sts - ",sts)
+      //console.log("testdata - ",testdata)
       for (let i = 0; i < sts.length; i++) { 
+         //console.log("i -",i)
          assertion.assertEqual(sts[i].assignmentName, testdata[i], "Assignment name Text mismatch");
       }
    },
 
    //Validate the click on 'Show Activities' button
    ENG_ASSLIST_STU_TC_9: function (testdata) {
+      //console.log("testdata -",testdata[0])
       sts = assignmentListDetailsPage_student.click_showActivitiesBtn(testdata[0]);
       for (let i = 0; i < sts.length; i++) { 
          assertion.assertEqual(sts[i].activityName, testdata[1].activityName, "Activity name Text mismatch");
          assertion.assertEqual(sts[i].activityStatus, testdata[1].activityStatus, "Activity status mismatch");
+         assertion.assertEqual(sts[i].activityScore, testdata[1].activityScore, "Activity name Text mismatch");
+         assertion.assertEqual(sts[i].activityAttempts, testdata[1].activityAttempts, "Activity name Text mismatch");
+
          assertion.assertEqual(sts[i].collapsibleActvitiesLbl, testdata[2].collapsibleActvitiesLbl, "Activities label Text mismatch");
          assertion.assertEqual(sts[i].collapsibleScoreLbl, testdata[2].collapsibleScoreLbl, "Score label Text mismatch");
          assertion.assertEqual(sts[i].collapsibleAttemptsLbl, testdata[2].collapsibleAttemptsLbl, "Attempts label Text mismatch");
