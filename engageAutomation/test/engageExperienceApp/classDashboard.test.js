@@ -578,7 +578,7 @@ module.exports = {
 		}
 
 	},
-	ENG_INS_CLASS_TC_104: function () {
+	ENG_STU_CLASS_TC_104: function () {
 		sts = studentClassDashboard.click_overviewBtn();
 	},
 };

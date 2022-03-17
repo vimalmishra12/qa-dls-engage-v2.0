@@ -34,6 +34,8 @@ module.exports = {
     collapsibleAttemptsLbl: selectorFile.css.ComproEngage.AssignmentListDetailsPage_student.collapsibleAttemptsLbl,
     activityName: selectorFile.css.ComproEngage.AssignmentListDetailsPage_student.activityName,
     activityStatus: selectorFile.css.ComproEngage.AssignmentListDetailsPage_student.activityStatus,
+    activityScore: selectorFile.css.ComproEngage.AssignmentListDetailsPage_student.activityScore,
+    activityAttempt: selectorFile.css.ComproEngage.AssignmentListDetailsPage_student.activityAttempt,
 
 
     isInitialized: function () { 
@@ -171,53 +173,49 @@ module.exports = {
         for (i = 0; i < list.length; i++) {
             if ((action.getText(this.assignmentName+i+"]"))== assignmentNameName) {
                 res = action.click(list[i]);
-            break;
+                break;
             }
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --showActivitiesBtn clicked");
-            res= this.getData_activityList();} 
+            res = this.getData_activityList(i)
+        } 
         else
-        logger.logInto(stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
+            logger.logInto(stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")
         return res;
     },
 
     //Function to get Activity List in an Assignment
-    getData_activityList: function (collapsibleActvitiesLblName) {
+    getData_activityList: function (index) {
+        //console.log("index passed - ",index)
         logger.logInto(stackTrace.get());
         var obj=[];
-        action.waitForDisplayed(this.collapsibleActvitiesLbl);
-        var list = action.findElements(this.collapsibleActvitiesLbl);
-        if (collapsibleActvitiesLblName) {
-            for (var i=0;i<list.length;i++){
-                if (action.getText(this.collapsibleActvitiesLbl + i) == collapsibleActvitiesLblName) {
-                    obj[0] = {
-                        activityName:(action.getElementCount(this.activityName+"-0-"+i+"]")  > 0) ? action.getText(this.activityName+"-0-"+i+"]")  : null,
-                        activityStatus:(action.getElementCount(this.activityStatus+"-0-"+i+"]")  > 0) ? action.getText(this.activityStatus+"-0-"+i+"]")  : null,
-                        activityScore:(action.getElementCount(this.activityScore+"-0-"+i+"]")  > 0) ? action.getText(this.activityScore+"-0-"+i+"]")  : null,
-                        activityAttempt:(action.getElementCount(this.activityAttempt+"-0-"+i+"]")  > 0) ? action.getText(this.activityAttempt+"-0-"+i+"]")  : null,
+        browser.pause(2000);
+        var list = action.findElements(this.activityName+index);
+        console.log("list.length -",list.length)
+        // if (this.collapsibleActvitiesLbl+index) {
+        //     for (var i=0;i<list.length;i++){
+        //         if (action.getText(this.collapsibleActvitiesLbl + i) == collapsibleActvitiesLblName) {
+        //             obj[0] = {
+        //                 activityName:(action.getElementCount(this.activityName+"-0-"+i+"]")  > 0) ? action.getText(this.activityName+"-0-"+i+"]")  : null,
+        //                 activityStatus:(action.getElementCount(this.activityStatus+"-0-"+i+"]")  > 0) ? action.getText(this.activityStatus+"-0-"+i+"]")  : null,
+        //                 activityScore:(action.getElementCount(this.activityScore+"-0-"+i+"]")  > 0) ? action.getText(this.activityScore+"-0-"+i+"]")  : null,
+        //                 activityAttempt:(action.getElementCount(this.activityAttempt+"-0-"+i+"]")  > 0) ? action.getText(this.activityAttempt+"-0-"+i+"]")  : null,
 
-                    }
-                break; 
-                }
-            } 
-        } 
-        else {
-            console.log("List/length",list.length);
-            // var i = 0;
-            // let name = action.getText(this.activityName+"0-"+i+"]");
-            //console.log("name - ",name);
-            for (var i=0;i<list.length;i++) {
-                obj[i] = {
-                    activityName:(action.getElementCount(this.activityName+"-0-"+i+"]")  > 0) ? action.getText(this.activityName+"-0-"+i+"]")  : null,
-                    activityStatus:(action.getElementCount(this.activityStatus+"-0-"+i+"]")  > 0) ? action.getText(this.activityStatus+"-0-"+i+"]")  : null,
-                    activityScore:(action.getElementCount(this.activityScore+"-0-"+i+"]")  > 0) ? action.getText(this.activityScore+"-0-"+i+"]")  : null,
-                    activityAttempt:(action.getElementCount(this.activityAttempt+"-0-"+i+"]")  > 0) ? action.getText(this.activityAttempt+"-0-"+i+"]")  : null,
+        //             }
+        //         break; 
+        //         }
+        //     } 
+        // }
+        for (var i=0; i<list.length; i++) {
+            obj[i] = {
+                activityName: (action.getElementCount(this.activityName+index+"-"+i+"]")  > 0) ? action.getText(this.activityName+index+"-"+i+"]")  : null,
+                activityStatus: (action.getElementCount(this.activityStatus+index+"-"+i+"]")  > 0) ? action.getText(this.activityStatus+index+"-"+i+"]")  : null,
+                activityScore: (action.getElementCount(this.activityScore+index+"-"+i+"]")  > 0) ? action.getText(this.activityScore+index+"-"+i+"]")  : null,
+                activityAttempts: (action.getElementCount(this.activityAttempt+index+"-"+i+"]")  > 0) ? action.getText(this.activityAttempt+index+"-"+i+"]")  : null,
 
-                }
             }
         }
-        console.log("activity list -",obj)
         return obj; 
     },
 
