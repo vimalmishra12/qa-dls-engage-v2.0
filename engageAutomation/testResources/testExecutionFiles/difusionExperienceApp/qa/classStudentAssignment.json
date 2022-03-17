@@ -1,6 +1,6 @@
 {
   "Suite1": {
-    "Name": "Validation of student NO assignment",
+    "Name": "Validation of assignment page data in student with NO assignment",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
@@ -63,7 +63,7 @@
     "Test": [
       {
         "id": "ENG_ASSLIST_STU_TC_7",
-        "description": "",
+        "description": "Validate the content of student assignment list details page",
         "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
         "testData": [
           {
@@ -74,7 +74,7 @@
       },
       {
         "id": "ENG_ASSLIST_STU_TC_4",
-        "description": "",
+        "description": "Validate the click on Due assignment tab tab on assignment page",
         "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
         "testData": [
           {
@@ -85,7 +85,7 @@
       },
       {
         "id": "ENG_ASSLIST_STU_TC_1",
-        "description": "",
+        "description": "Validate the content on blank Due assignment page",
         "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
         "testData": [
           {
@@ -96,7 +96,7 @@
       },
       {
         "id": "ENG_ASSLIST_STU_TC_5",
-        "description": "",
+        "description": "Validate the click on Upcoming assignment tab on assignment page",
         "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
         "testData": [
           {
@@ -107,7 +107,7 @@
       },
       {
         "id": "ENG_ASSLIST_STU_TC_2",
-        "description": "",
+        "description": "Validate the content on blank Upcoming assignment page",
         "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
         "testData": [
           {
@@ -118,7 +118,7 @@
       },
       {
         "id": "ENG_ASSLIST_STU_TC_6",
-        "description": "",
+        "description": "Validate the click on Completed assignment tab on assignment page",
         "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
         "testData": [
           {
@@ -129,7 +129,7 @@
       },
       {
         "id": "ENG_ASSLIST_STU_TC_3",
-        "description": "",
+        "description": "Validate the content on blank Completed assignment page",
         "testFile": "./test/engageExperienceApp/assignmentListDetails_students.test.js",
         "testData": [
           {
@@ -143,7 +143,7 @@
     "After": []
   },
   "Suite2": {
-    "Name": "Validation of student assignment detail list",
+    "Name": "Validation of Different assignment data and their corresponding activity list data",
     "TestCaseRepo": [
       "./testResources/testcaseRepository/engageExperienceApp/EngageTCRepository.json"
     ],
