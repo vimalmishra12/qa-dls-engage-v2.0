@@ -187,26 +187,10 @@ module.exports = {
 
     //Function to get Activity List in an Assignment
     getData_activityList: function (index) {
-        //console.log("index passed - ",index)
         logger.logInto(stackTrace.get());
         var obj=[];
         browser.pause(2000);
         var list = action.findElements(this.activityName+index);
-        console.log("list.length -",list.length)
-        // if (this.collapsibleActvitiesLbl+index) {
-        //     for (var i=0;i<list.length;i++){
-        //         if (action.getText(this.collapsibleActvitiesLbl + i) == collapsibleActvitiesLblName) {
-        //             obj[0] = {
-        //                 activityName:(action.getElementCount(this.activityName+"-0-"+i+"]")  > 0) ? action.getText(this.activityName+"-0-"+i+"]")  : null,
-        //                 activityStatus:(action.getElementCount(this.activityStatus+"-0-"+i+"]")  > 0) ? action.getText(this.activityStatus+"-0-"+i+"]")  : null,
-        //                 activityScore:(action.getElementCount(this.activityScore+"-0-"+i+"]")  > 0) ? action.getText(this.activityScore+"-0-"+i+"]")  : null,
-        //                 activityAttempt:(action.getElementCount(this.activityAttempt+"-0-"+i+"]")  > 0) ? action.getText(this.activityAttempt+"-0-"+i+"]")  : null,
-
-        //             }
-        //         break; 
-        //         }
-        //     } 
-        // }
         for (var i=0; i<list.length; i++) {
             obj[i] = {
                 activityName: (action.getElementCount(this.activityName+index+"-"+i+"]")  > 0) ? action.getText(this.activityName+index+"-"+i+"]")  : null,

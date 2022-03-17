@@ -74,10 +74,7 @@ module.exports = {
 
    //Validate the click on 'Show Activities' button
    ENG_ASSLIST_STU_TC_9: function (testdata) {
-      console.log("testdata whole -",testdata)
       sts = assignmentListDetailsPage_student.click_showActivitiesBtn(testdata[0]);
-      console.log("sts -",sts)
-      console.log("testdata -",testdata[1])
       for (let i = 0; i < sts.length; i++) {
          assertion.assertEqual(sts[i].activityName, testdata[1][i].activityName, "Activity name Text mismatch");
          assertion.assertEqual(sts[i].activityStatus, testdata[1][i].activityStatus, "Activity status mismatch");
