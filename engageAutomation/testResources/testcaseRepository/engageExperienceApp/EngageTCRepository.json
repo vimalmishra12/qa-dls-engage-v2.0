@@ -2914,6 +2914,12 @@
           "description": "Validate the click on 'Show Activities' button",
           "tags": "P2",
           "visualTest": "-"
+        },
+        {
+          "id": "ENG_ASSLIST_STU_TC_10",
+          "description": "Validate the data after click on 'Show Activities' button",
+          "tags": "P2",
+          "visualTest": "-"
         }
       ]
     }

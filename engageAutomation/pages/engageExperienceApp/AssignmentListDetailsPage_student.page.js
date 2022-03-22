@@ -178,7 +178,7 @@ module.exports = {
         }
         if (res == true) {
             logger.logInto(stackTrace.get(), " --showActivitiesBtn clicked");
-            res = this.getData_activityList(i)
+            //res = this.getData_activityList(i)
         } 
         else
             logger.logInto(stackTrace.get(), " --showActivitiesBtn NOT clicked", "error")

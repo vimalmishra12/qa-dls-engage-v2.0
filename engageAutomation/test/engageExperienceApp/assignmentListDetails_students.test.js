@@ -75,6 +75,12 @@ module.exports = {
    //Validate the click on 'Show Activities' button
    ENG_ASSLIST_STU_TC_9: function (testdata) {
       sts = assignmentListDetailsPage_student.click_showActivitiesBtn(testdata[0]);
+      assertion.assertEqual(sts, true, "Select tab error");
+   },
+
+   //Validate the data after click on 'Show Activities' button
+   ENG_ASSLIST_STU_TC_10: function (testdata) {
+      sts = assignmentListDetailsPage_student.getData_activityList(testdata[0]);
       for (let i = 0; i < sts.length; i++) {
          assertion.assertEqual(sts[i].activityName, testdata[1][i].activityName, "Activity name Text mismatch");
          assertion.assertEqual(sts[i].activityStatus, testdata[1][i].activityStatus, "Activity status mismatch");
